@@ -11,3 +11,4 @@ do
 done
 cat for32
 rm for32
+exit 0
