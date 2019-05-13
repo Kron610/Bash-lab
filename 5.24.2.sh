@@ -1,5 +1,5 @@
 #!/bin/bash
-#Creates a secind file if it did not exist
+#Creates a second file if it did not exist
 if [ -n "$1" ] && [ -n "$2" ]
 	then
 	if test -f $1
