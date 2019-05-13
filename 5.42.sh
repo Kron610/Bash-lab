@@ -19,5 +19,8 @@ while  ! [[ $l =~ $reint ]]
                 done
 let e=$l-$f
 head -n $l $1 | tail -$e
+exit 0
 else
 echo -e "No parametrs found.\nEnter name of file"
+exit 1
+fi
