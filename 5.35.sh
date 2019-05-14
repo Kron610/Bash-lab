@@ -2,11 +2,12 @@
 
 read message
 i=1
-while ( test "$i" -le "12" ) #12 is the namber of times
+while ( test "$i" -le "12" ) #12 * 5 = 60
 do
 let i=$i+1
 sleep 5; echo $message 
 done
+exit 0
 
 #second realization
 #let m="$(date '+%M')"

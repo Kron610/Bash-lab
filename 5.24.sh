@@ -1,17 +1,36 @@
-if [ $# -ne 2 ]
-then
-	echo Error
-else
-	if [ -e $2 ]
+#!/bin/bash
+if [ -n "$1" ] && [ -n "$2" ]
 	then
-		echo "Do you want to rewrite the file?(Yes/No)"
-		read ANS
-		case $ANS in
-			Yes) cp -f $1 $2 ;;
-			No) cat $1 >> $2 ;;
-			*) echo Error ;;
-		esac
+	if test -f $1
+		then
+		if test -f $2
+			then 
+			echo 'input "y" if you want lose info in second file'
+			echo 'input "n" if you want add data in the end of second file'
+			read ans
+			while [ "$ans" != "y" ] && [ "$ans" != "n" ]
+			do
+			echo 'Bad input! Input "y" or "n"'
+			read ans
+			done
+			if [ "$ans" = "y" ]
+			then
+				cat $1 > $2
+			fi
+			if [ "$ans" = "n" ]
+			then
+				cat $1 >> $2
+			fi
+			exit 0
+		else
+			echo "file $2 not exist"
+			exit 1
+		fi
 	else
-		cp $1 $2
+		echo "file $1 not exist"
+		exit 1
 	fi
+else
+echo "No parametrs found."
+exit 1
 fi

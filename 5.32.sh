@@ -1,10 +1,14 @@
+#!/bin/bash
+
 echo 'you should input words, if you want to end you should input "end"'
-str=""
+touch for32
 read word
 while [ "$word" != "end" ]
 do
-	str="$str $word"
+	echo $word >>for32
 	echo 'input next word'
 	read word
 done
-echo $str
+cat for32
+rm for32
+exit 0
