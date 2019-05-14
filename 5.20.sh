@@ -1,4 +1,4 @@
-DATE=$(date | cut -d' ' -f5 | cut -c1,2)
+DATE=$(date +%H)
 case $DATE in
 	[6-9]|1[0-1])
 		echo "Good Morning";;
