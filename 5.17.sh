@@ -1,9 +1,10 @@
 echo "name is $0"
 echo "number of arguments is $#"
 while [ $# -gt 0 ]
-do	
-	size=$(expr length "$1")
-	echo "$1 $size"
+do
+	var=$1	
+	size=${#var}
+	echo "$1 length is $size"
 	shift
 done
 

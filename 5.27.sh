@@ -1,15 +1,8 @@
-#!/bin/bash
 echo "Enter name of file"
 read name
 if test -f $name
 then
-	touch for27
-	sort -u $name > for27
-	cat for27 > $name
-	rm for27
-	#sort -u $name|sponge $name
-	exit 0		
+	cat $name | sort -u
 else
-	echo 'this file not exist'
-	exit 1
+	echo 'this file does not exist'
 fi
