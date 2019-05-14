@@ -7,6 +7,8 @@ TODO
 Please delete the numbers that have already been made.
 ------------------------------------------------------
 
+* 36
+* 37
 * 38
 * 43
 * 44

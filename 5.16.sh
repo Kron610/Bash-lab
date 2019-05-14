@@ -1,6 +1,10 @@
 str=""
 while [ $# -gt 0 ]
 do 
-	echo $1
+	str="${str} $1"
 	shift
-done| sort -d
+done
+echo $str | tr " " "\n" | sort -g | tr "\n" " "
+
+
+

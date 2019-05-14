@@ -1,8 +1,12 @@
+#!/bin/bash
+
 echo 'input filename'
 read name
 if test -f $name
 then
-	cat $name | sort | uniq -d 
+	uniq -d < $name | sort 
+	exit 0
 else
-	echo 'this file does not exist'
+	echo 'this file not exist'
+	exit 1
 fi

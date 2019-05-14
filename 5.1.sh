@@ -1,2 +1,2 @@
-myvar="Hello, world"
-echo $myvar
+myvar="Hello world"
+echo ${myvar}
