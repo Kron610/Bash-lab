@@ -20,4 +20,3 @@ echo $message | write $y1
 fi
 done
 rm for34 usernames34
-exit 0
