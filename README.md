@@ -8,11 +8,8 @@ Please delete the numbers that have already been made.
 ------------------------------------------------------
 
 * 38
-* 47
 * 48
 * 49
-* 50
-* 51
 * 52
 * 53
 * 54
